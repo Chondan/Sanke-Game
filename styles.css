@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+canvas {
+    background-color: black;
+}
+
+@media screen and (max-width: 600px) {
+    div#touch-control {
+        border: 1px solid black;
+        width: 400px;
+        height: 300px;
+    }
+}
