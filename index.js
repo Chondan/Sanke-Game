@@ -104,7 +104,7 @@
                 // check wheter snake eat it own body
                 tail.forEach((body, index) => {
                     if (index != 0) {
-                        if (tail[0].posX == body.posX && tail[0].posY == body.posY) {
+                        if (tail[0].posX + moveX == body.posX && tail[0].posY + moveY == body.posY) {
                             console.log("Game Over");
                             clearInterval(run);
                         }
@@ -158,11 +158,6 @@
             if (touchArr < 5) {
                 return;
             }
-            console.log(touchArr);
-            console.log("x2: ", touchArr[touchArr.length - 1][0].clientX);
-            console.log("x1: ", touchArr[touchArr.length - 4][0].clientX);
-            console.log("y2: ", touchArr[touchArr.length - 1][0].clientY);
-            console.log("y1: ", touchArr[touchArr.length - 4][0].clientY);
             const x2 = touchArr[touchArr.length - 1][0].clientX;
             const x1 = touchArr[touchArr.length - 4][0].clientX;
             const y2 = touchArr[touchArr.length - 1][0].clientY;
